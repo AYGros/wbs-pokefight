@@ -1,14 +1,15 @@
-const express = require ("express")
+const express = require ("express");
+const pokemonController = require("../controllers/pokemonController");
 const router = express.Router();
-const pokedata = require("../pokemon.json")
 
 
 //get all pokemon 
 
-router.get ('/', (req,res)=>{
-    res.status(200).json(pokedata)
+router.get ('/', pokemonController.getAllPokemon)
 
-})
 
+// get a one pokemon by id
+
+router.get('/:id', pokemonController.getOnePokemon)
 
 module.exports= router;
