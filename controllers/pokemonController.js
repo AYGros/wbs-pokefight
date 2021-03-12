@@ -21,7 +21,7 @@ const getOnePokemon =  async (req, res, next)=>{
     }
 }
 
-
+const selectInfo = 
 
 
 module.exports={
